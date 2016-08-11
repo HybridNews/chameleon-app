@@ -1,0 +1,45 @@
+{
+  "ProjectName": "ChameleonApp",
+  "ProjectGuid": "04d20ea5-059e-428c-ab3a-91fe555a3359",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.ChameleonApp",
+  "DisplayName": "ChameleonApp",
+  "Author": "",
+  "Description": "ChameleonApp",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{8fa3747b-fe55-4abf-96f5-a93904d1de73}",
+  "WP8ProductID": "{ef5ee4a0-71a3-416c-9fc3-88cffae153ee}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.ChameleonApp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
