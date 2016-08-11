@@ -1,6 +1,9 @@
 {
+	"name": "chameleon-app",
+	"version": "0.0.1",
 	"scripts": {
-		"postinstall": "typings install"
+		"postinstall": "typings install",
+		"typings": "typings"
 	},
 	"dependencies": {
 		"@angular/common": "2.0.0-rc.5",
