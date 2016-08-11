@@ -26,6 +26,14 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="systemjs.config.js" />
+    <Content Include="typings.json" />
     <None Include=".abignore" />
     <Content Include=".abproject" />
     <Content Include=".debug.abproject" />
@@ -107,28 +115,27 @@
     <Content Include="css\index.css" />
     <Content Include="img\cordova.png" />
     <Content Include="img\logo.png" />
-    <Content Include="scripts\index.js" />
-    <TypeScriptCompile Include="scripts\index.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\cordova.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\simulator.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\BatteryStatus.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Camera.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Contacts.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Device.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceMotion.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceOrientation.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Dialogs.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileSystem.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileTransfer.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Globalization.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\InAppBrowser.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Media.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\MediaCapture.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\NetworkInformation.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Push.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Splashscreen.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Vibration.d.ts" />
-    <TypeScriptCompile Include="scripts\typings\cordova\plugins\WebSQL.d.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="typings\cordova\cordova.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\simulator.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\BatteryStatus.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Camera.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Contacts.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Device.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\DeviceMotion.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\DeviceOrientation.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Dialogs.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\FileSystem.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\FileTransfer.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Globalization.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\InAppBrowser.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Media.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\MediaCapture.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\NetworkInformation.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Push.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Splashscreen.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\Vibration.d.ts" />
+    <TypeScriptCompile Include="typings\cordova\plugins\WebSQL.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Resources\" />
@@ -152,11 +159,11 @@
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="css\" />
     <Folder Include="img\" />
+    <Folder Include="app\" />
     <Folder Include="Plugins\" />
-    <Folder Include="scripts\" />
-    <Folder Include="scripts\typings\" />
-    <Folder Include="scripts\typings\cordova\" />
-    <Folder Include="scripts\typings\cordova\plugins\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\cordova\" />
+    <Folder Include="typings\cordova\plugins\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(IceniumTargets)Build.targets" />
