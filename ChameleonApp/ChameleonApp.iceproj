@@ -26,14 +26,15 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app\main.js">
-      <SubType>Content</SubType>
-    </Content>
+    <Content Include=".gitignore" />
     <Content Include="package.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="systemjs.config.js" />
     <Content Include="typings.json" />
+    <Content Include="typings\globals\core-js\typings.json">
+      <SubType>Content</SubType>
+    </Content>
     <None Include=".abignore" />
     <Content Include=".abproject" />
     <Content Include=".debug.abproject" />
@@ -115,6 +116,9 @@
     <Content Include="css\index.css" />
     <Content Include="img\cordova.png" />
     <Content Include="img\logo.png" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="typings\cordova\cordova.d.ts" />
     <TypeScriptCompile Include="typings\cordova\simulator.d.ts" />
@@ -136,8 +140,13 @@
     <TypeScriptCompile Include="typings\cordova\plugins\Splashscreen.d.ts" />
     <TypeScriptCompile Include="typings\cordova\plugins\Vibration.d.ts" />
     <TypeScriptCompile Include="typings\cordova\plugins\WebSQL.d.ts" />
+    <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\articles-list\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\components\" />
+    <Folder Include="app\services\" />
     <Folder Include="App_Resources\" />
     <Folder Include="App_Resources\Android\" />
     <Folder Include="App_Resources\Android\drawable-hdpi\" />
@@ -164,6 +173,8 @@
     <Folder Include="typings\" />
     <Folder Include="typings\cordova\" />
     <Folder Include="typings\cordova\plugins\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\core-js\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(IceniumTargets)Build.targets" />
