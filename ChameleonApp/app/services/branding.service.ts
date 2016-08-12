@@ -23,7 +23,7 @@ export class BrandingService {
 				branding.title = AppConfig.title || rssChannel.title;
 				branding.topArticlesCount = AppConfig.topArticlesCount;
 				branding.topArticlesIntervalInMs = AppConfig.topArticlesIntervalInMs;
-				branding.largeLogoUrl = AppConfig.largeLogoUrl
+                branding.largeLogoUrl = AppConfig.largeLogoUrl || rssChannel.image.url;
 
 				return Promise.resolve(branding);
 			});

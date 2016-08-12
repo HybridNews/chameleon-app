@@ -1,3 +1,13 @@
+<nav *ngIf="branding" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">
+                <img class="img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
+            </a>
+        </div>
+    </div>
+</nav>
+
 <!--TODO: take a look at trackBy for performance-->
 <carousel *ngIf="branding" [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
 	<slide *ngFor="let article of slides; let index=index" [active]="article.Active">
