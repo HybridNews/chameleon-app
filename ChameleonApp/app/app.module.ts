@@ -12,8 +12,8 @@ import 'rxjs/add/operator/toPromise';
 
 @NgModule({
 	imports: [BrowserModule],
-	declarations: [AppComponent],
-	bootstrap: [AppComponent, ArticlesComponent],
+	declarations: [AppComponent, ArticlesComponent],
+	bootstrap: [AppComponent],
 	providers: [HTTP_PROVIDERS, ArticlesService, XmlToJsonService]
 })
 export class AppModule { }

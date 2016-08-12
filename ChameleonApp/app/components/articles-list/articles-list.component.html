@@ -1,6 +1,6 @@
 <!--TODO: take a look at trackBy for performance-->
 <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
-	<slide *ngFor="#slide of slides; #index=index" [active]="slide.Active">
+	<slide *ngFor="let slide of slides; let index=index" [active]="slide.Active">
 		<img class="img-responsive" [src]="baseUrl + slide.image">
 		<div class="carousel-caption">
 			<p>{{slide.title}}</p>
@@ -8,4 +8,4 @@
 	</slide>
 </carousel>
 
-<div *ngFor="#article of articles">{{article.title}}</div>
+<div *ngFor="let article of articles">{{article.title}}</div>

@@ -27,6 +27,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="app\components\articles-list\articles-list.component.css" />
     <Content Include="package.json">
       <SubType>Content</SubType>
     </Content>
@@ -113,9 +114,6 @@
     <Resource Include="App_Resources\WP8\Assets\WideLogo.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
-    <Content Include="css\index.css" />
-    <Content Include="img\cordova.png" />
-    <Content Include="img\logo.png" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.html" />
@@ -170,8 +168,6 @@
     <Folder Include="App_Resources\WP8\Assets\" />
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
-    <Folder Include="css\" />
-    <Folder Include="img\" />
     <Folder Include="app\" />
     <Folder Include="Plugins\" />
     <Folder Include="typings\" />

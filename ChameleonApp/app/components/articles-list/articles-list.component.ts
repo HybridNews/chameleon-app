@@ -14,7 +14,8 @@ interface RssFeedResult {
 @Component({
 	directives: [CarouselComponent, SlideComponent],
 	selector: 'articles-list',
-	templateUrl: 'app/components/articles-list/articles-list.component.html'
+	templateUrl: 'app/components/articles-list/articles-list.component.html',
+	styleUrls: ['app/components/articles-list/articles-list.component.css']
 })
 export class ArticlesComponent implements OnInit {
 	heroes: Observable<any[]>;
