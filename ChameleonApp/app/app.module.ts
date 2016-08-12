@@ -8,6 +8,8 @@ import { ArticlesComponent } from './components/articles-list/articles-list.comp
 import { ArticlesService } from './services/articles.service';
 import { XmlToJsonService } from './services/xml-to-json.service';
 import { HttpService } from './services/http.service';
+import { RssFeedService } from './services/rss-feed.service';
+import { BrandingService } from './services/branding.service';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -15,6 +17,6 @@ import 'rxjs/add/operator/toPromise';
 	imports: [BrowserModule],
 	declarations: [AppComponent, ArticlesComponent],
 	bootstrap: [AppComponent],
-	providers: [HTTP_PROVIDERS, ArticlesService, XmlToJsonService, HttpService]
+	providers: [HTTP_PROVIDERS, ArticlesService, XmlToJsonService, HttpService, RssFeedService, BrandingService]
 })
 export class AppModule { }

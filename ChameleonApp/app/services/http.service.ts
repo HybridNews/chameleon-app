@@ -10,7 +10,6 @@ export class HttpService {
 
 	public get(url: string): Promise<Response> {
 		var that = this;
-		// TODO: test
 		return this.http.get(url).toPromise().catch(reason => that.handleError(reason));
 	}
 

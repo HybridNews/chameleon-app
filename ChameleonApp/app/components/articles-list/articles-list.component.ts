@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable }        from 'rxjs/Observable';
+import { CarouselComponent } from 'ng2-bootstrap/components/carousel/carousel.component';
+import { SlideComponent } from 'ng2-bootstrap/components/carousel/slide.component';
 
-import {CarouselComponent} from 'ng2-bootstrap/components/carousel/carousel.component';
-import {SlideComponent} from 'ng2-bootstrap/components/carousel/slide.component';
+import { Observable } from 'rxjs/Observable';
+import { Article } from '../../models/article.model';
+import { Branding } from '../../models/branding.model';
 
 import { ArticlesService } from '../../services/articles.service';
-
-import { Article } from '../../models/article';
-
-interface RssFeedResult {
-	channel;
-}
+import { BrandingService } from '../../services/branding.service';
 
 @Component({
 	directives: [CarouselComponent, SlideComponent],
@@ -19,24 +16,22 @@ interface RssFeedResult {
 	styleUrls: ['app/components/articles-list/articles-list.component.css']
 })
 export class ArticlesComponent implements OnInit {
-	baseUrl: string;
-	articles: Article[];
+	branding: Branding;
 	slides: Article[];
-	myInterval: number;
-	noWrapSlides: boolean;
+	articles: Article[];
 
 	constructor(
-		private articlesService: ArticlesService
-	) {
-		this.myInterval = 2000;
-		this.noWrapSlides = false;
-	}
+		private articlesService: ArticlesService,
+		private brandingService: BrandingService
+	) { }
 
 	ngOnInit() {
 		let that = this;
-		this.articlesService.getArticles().then(articles => {
-			that.articles = articles.slice(5);
-			that.slides = articles.slice(0, 5);
+		Promise.all([this.brandingService.getBranding(), this.articlesService.getArticles()]).then(values => {
+			that.branding = values[0];
+			let allArticles = values[1];
+			that.articles = allArticles.slice(this.branding.topArticlesCount);
+			that.slides = allArticles.slice(0, this.branding.topArticlesCount);
 		});
 	}
 }
