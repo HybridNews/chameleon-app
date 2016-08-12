@@ -4,8 +4,7 @@ import { Observable }        from 'rxjs/Observable';
 import {CarouselComponent} from 'ng2-bootstrap/components/carousel/carousel.component';
 import {SlideComponent} from 'ng2-bootstrap/components/carousel/slide.component';
 
-import { ArticlesService } from '../../services/rss-articles.service';
-import { XmlToJsonService } from '../../services/xml-to-json.service';
+import { ArticlesService } from '../../services/articles.service';
 
 import { Article } from '../../models/article';
 
@@ -27,8 +26,7 @@ export class ArticlesComponent implements OnInit {
 	noWrapSlides: boolean;
 
 	constructor(
-		private articlesService: ArticlesService,
-		private xmlToJsonService: XmlToJsonService
+		private articlesService: ArticlesService
 	) {
 		this.myInterval = 2000;
 		this.noWrapSlides = false;
@@ -36,15 +34,10 @@ export class ArticlesComponent implements OnInit {
 
 	ngOnInit() {
 		let that = this;
-		this.articlesService.getArticles().subscribe(
-			function (response) {
-				let channel = (<RssFeedResult>that.xmlToJsonService.getJson(response.text())).channel;
-				that.baseUrl = channel.link;
-				let items = channel.item;
-				that.articles = items.slice(5);
-				that.slides = items.slice(0, 5);
-			}
-		);
+		this.articlesService.getArticles().then(articles => {
+			that.articles = articles.slice(5);
+			that.slides = articles.slice(0, 5);
+		});
 	}
 }
 

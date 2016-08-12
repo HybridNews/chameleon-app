@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class HttpService {
 
 	constructor(private http: Http) { }
 
-	public getArticles(): Promise<Response> {
-		return this.http.get("http://www.novsport.com/rss_news.xml").map().toPromise();
+	public get(url: string): Promise<Response> {
+		var that = this;
+		// TODO: test
+		return this.http.get(url).toPromise().catch(reason => that.handleError(reason));
 	}
 
 	private handleError(error: any) {
-		console.error('An error occurred', error);
-		return Promise.reject(error.message || error);
+		let errMsg = (error.message) ? error.message :
+			error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+		console.error(errMsg); // TODO: use logger
+
+		return Promise.reject(errMsg);
 	}
 }
-
-//http://www.novsport.com/rss_news.xml
-//http://gong.bg/rss?view=full
