@@ -1,12 +1,14 @@
 import { Injectable }    from '@angular/core';
 import { Http } from '@angular/http';
 
+import { Article } from '../models/article';
+
 @Injectable()
 export class ArticlesService {
 
 	constructor(private http: Http) { }
 
-	getArticles() {
+	public getArticles() {
 		return this.http.get("http://www.novsport.com/rss_news.xml");
 	}
 

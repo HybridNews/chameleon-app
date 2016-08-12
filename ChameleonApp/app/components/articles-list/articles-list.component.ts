@@ -4,8 +4,10 @@ import { Observable }        from 'rxjs/Observable';
 import {CarouselComponent} from 'ng2-bootstrap/components/carousel/carousel.component';
 import {SlideComponent} from 'ng2-bootstrap/components/carousel/slide.component';
 
-import { ArticlesService } from '../../services/articles.service';
+import { ArticlesService } from '../../services/rss-articles.service';
 import { XmlToJsonService } from '../../services/xml-to-json.service';
+
+import { Article } from '../../models/article';
 
 interface RssFeedResult {
 	channel;
@@ -18,10 +20,9 @@ interface RssFeedResult {
 	styleUrls: ['app/components/articles-list/articles-list.component.css']
 })
 export class ArticlesComponent implements OnInit {
-	heroes: Observable<any[]>;
 	baseUrl: string;
-	articles: any[];
-	slides: any[];
+	articles: Article[];
+	slides: Article[];
 	myInterval: number;
 	noWrapSlides: boolean;
 

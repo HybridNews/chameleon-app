@@ -119,7 +119,9 @@
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.html" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
-    <Content Include="app\services\articles.service.ts" />
+    <TypeScriptCompile Include="app\models\article.ts" />
+    <TypeScriptCompile Include="app\services\http.service.ts" />
+    <TypeScriptCompile Include="app\services\rss-articles.service.ts" />
     <TypeScriptCompile Include="app\services\xml-to-json.service.ts" />
     <TypeScriptCompile Include="typings\cordova\cordova.d.ts" />
     <TypeScriptCompile Include="typings\cordova\simulator.d.ts" />

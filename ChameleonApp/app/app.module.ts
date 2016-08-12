@@ -5,7 +5,7 @@ import { AppComponent }  from './app.component';
 import { ArticlesComponent } from './components/articles-list/articles-list.component';
 
 import { HTTP_PROVIDERS } from '@angular/http';
-import { ArticlesService } from './services/articles.service';
+import { ArticlesService } from './services/rss-articles.service';
 import { XmlToJsonService } from './services/xml-to-json.service';
 
 import 'rxjs/add/operator/toPromise';
