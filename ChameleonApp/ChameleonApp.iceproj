@@ -9684,6 +9684,12 @@
     <Content Include="package.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\LICENSE" />
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\plugin.xml" />
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\README.md" />
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\libs\jshybugger-library.jar" />
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\cordova\JsHybuggerPlugin.java" />
+    <Content Include="Plugins\jshybugger-plugin-4.5.9\www\jsHybuggerLoader.js" />
     <Content Include="systemjs.config.js" />
     <Content Include="typings.json" />
     <None Include=".abignore" />
@@ -11676,6 +11682,14 @@
     <Folder Include="node_modules\zone.js\" />
     <Folder Include="node_modules\zone.js\dist\" />
     <Folder Include="Plugins\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\libs\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\cordova\" />
+    <Folder Include="Plugins\jshybugger-plugin-4.5.9\www\" />
     <Folder Include="typings\" />
     <Folder Include="typings\cordova\" />
     <Folder Include="typings\cordova\plugins\" />
