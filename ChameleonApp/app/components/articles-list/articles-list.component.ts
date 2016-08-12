@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable }        from 'rxjs/Observable';
 
+import {CarouselComponent} from 'ng2-bootstrap/components/carousel/carousel.component';
+import {SlideComponent} from 'ng2-bootstrap/components/carousel/slide.component';
+
 import { ArticlesService } from '../../services/articles.service';
 import { XmlToJsonService } from '../../services/xml-to-json.service';
 
@@ -8,26 +11,26 @@ interface RssFeedResult {
 	channel;
 }
 
-//export class Hero {
-//	id: number;
-//	name: string;
-//}
 @Component({
+	directives: [CarouselComponent, SlideComponent],
 	selector: 'articles-list',
-	template: `
-    <h1>Hello World!</h1>
-    `
+	templateUrl: 'app/components/articles-list/articles-list.component.html'
 })
 export class ArticlesComponent implements OnInit {
 	heroes: Observable<any[]>;
 	baseUrl: string;
 	articles: any[];
 	slides: any[];
+	myInterval: number;
+	noWrapSlides: boolean;
 
 	constructor(
 		private articlesService: ArticlesService,
 		private xmlToJsonService: XmlToJsonService
-	) { }
+	) {
+		this.myInterval = 2000;
+		this.noWrapSlides = false;
+	}
 
 	ngOnInit() {
 		let that = this;

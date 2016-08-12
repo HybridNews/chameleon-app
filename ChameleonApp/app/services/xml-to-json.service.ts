@@ -5,7 +5,7 @@ interface WindowX extends Window {
 	DOMParser;
 }
 
-// http://stackoverflow.com/questions/1199180/read-xml-file-using-javascript
+// based on http://stackoverflow.com/questions/1199180/read-xml-file-using-javascript
 export class XmlToJsonService {
 	constructor() {
 	}
