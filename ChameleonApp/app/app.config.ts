@@ -11,4 +11,3 @@ export const AppConfig = {
 
 
 //http://www.novsport.com/rss_news.xml
-//http://gong.bg/rss?view=full

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Headers } from '@angular/http';
 
 import { AppConfig } from '../app.config';
 import { RssChannel } from '../models/rss-channel.model';
@@ -16,8 +17,10 @@ export class RssFeedService {
 
 	public getChannel(): Promise<RssChannel> {
 		let that = this;
+		let headers = new Headers();
+		headers.append('Accept', 'text/xml');
 
-		return that.httpService.get(AppConfig.feedUrl)
+		return that.httpService.get(AppConfig.feedUrl, headers)
 			.then(response => Promise.resolve(that.getArticlesFromRssFeed(response)));
 	}
 

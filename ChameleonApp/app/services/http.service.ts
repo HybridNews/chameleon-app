@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -8,9 +8,14 @@ export class HttpService {
 
 	constructor(private http: Http) { }
 
-	public get(url: string): Promise<Response> {
-		var that = this;
-		return this.http.get(url).toPromise().catch(reason => that.handleError(reason));
+	public get(url: string, headers: Headers): Promise<Response> {
+		let that = this;
+		let options: any = {};
+		if (headers) {
+			options.headers = headers;
+		}
+
+		return this.http.get(url, options).toPromise().catch(reason => that.handleError(reason));
 	}
 
 	private handleError(error: any) {
