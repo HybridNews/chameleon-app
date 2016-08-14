@@ -17,3 +17,7 @@ slide img.img-responsive {
 	height: 125px;
 	width: 100%;
 }
+
+.container-fluid {
+	margin-top: 20px;
+}
