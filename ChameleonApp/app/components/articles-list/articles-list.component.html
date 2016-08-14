@@ -11,7 +11,7 @@
 <!--TODO: take a look at trackBy for performance-->
 <carousel *ngIf="branding" [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
 	<slide *ngFor="let article of slides; let index=index" [active]="article.Active">
-		<img class="img-responsive" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
+		<img class="top-article-image img-responsive" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 		<div class="carousel-caption">
 			<p>{{article.title}}</p>
 		</div>
@@ -19,14 +19,14 @@
 </carousel>
 
 <!--<div *ngFor="let article of articles">{{article.title}}</div>-->
-<div class="container-fluid">
-	<div class="row">
+<div class="container-fluid all-articles-wrapper">
+	<div class="row" style="display:flex; flex-wrap: wrap;">
 		<div class="clearfix col-xs-6" *ngFor="let article of articles">
 			<div class="thumbnail">
-				<img [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
+				<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 				<div class="caption">
-					<h4 class="text-left">{{article.title}}</h4>
-					<p class="text-justify">{{article.description}}</p>
+					<h2 class="text-left article-title">{{article.title}}</h2>
+					<p class="text-left">{{article.description}}</p>
 				</div>
 			</div>
 		</div>

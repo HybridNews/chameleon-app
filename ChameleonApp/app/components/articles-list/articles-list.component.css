@@ -13,11 +13,15 @@
 	width: 100%;
 }
 
-slide img.img-responsive {
+.top-article-image {
 	height: 125px;
 	width: 100%;
 }
 
-.container-fluid {
+.all-articles-wrapper {
 	margin-top: 20px;
+}
+
+.article-thumbnail-image {
+	height:100px;
 }

@@ -30,8 +30,7 @@ export class ArticlesComponent implements OnInit {
 		Promise.all([this.brandingService.getBranding(), this.articlesService.getArticles()]).then(values => {
 			that.branding = values[0];
 			let allArticles = values[1];
-			// TODO: remove 10
-			that.articles = allArticles.slice(this.branding.topArticlesCount, 10);
+			that.articles = allArticles.slice(this.branding.topArticlesCount);
 			that.slides = allArticles.slice(0, this.branding.topArticlesCount);
 		});
 	}
