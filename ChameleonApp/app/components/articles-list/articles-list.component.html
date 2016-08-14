@@ -2,7 +2,7 @@
     <!--<div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand">-->
-                <img class="img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
+                <img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
             <!--</a>
         </div>
     </div>-->
@@ -11,7 +11,7 @@
 <!--TODO: take a look at trackBy for performance-->
 <carousel *ngIf="branding" [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
 	<slide *ngFor="let article of slides; let index=index" [active]="article.Active">
-		<img class="img-responsive" [src]="branding.resourcesBaseUrl + article.image">
+		<img class="img-responsive" [src]="branding.resourcesBaseUrl + article.imageUrl">
 		<div class="carousel-caption">
 			<p>{{article.title}}</p>
 		</div>

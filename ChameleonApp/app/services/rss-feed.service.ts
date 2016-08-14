@@ -28,6 +28,13 @@ export class RssFeedService {
 		let jsonFeed: any = this.xmlToJsonService.getJson(rssFeed.text());
 		jsonFeed.channel.items = jsonFeed.channel.item;
 		delete jsonFeed.channel.item;
+		let item: any = null;
+		for (let i in jsonFeed.channel.items) {
+			item = jsonFeed.channel.items[i];
+			item.description = item.plain_description || item.description;
+			item.imageUrl = item.image || (item.enclosure && item.enclosure.url);
+        }
+
 		let result = <RssChannel>jsonFeed.channel;
 
 		return result;
