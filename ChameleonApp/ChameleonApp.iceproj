@@ -44,6 +44,10 @@
       <SubType>Content</SubType>
       <DependentUpon>app\components\articles-list\articles-list.component.ts</DependentUpon>
     </Content>
+    <Content Include="app\directives\gestures.directive.js">
+      <SubType>Content</SubType>
+      <DependentUpon>app\directives\gestures.directive.ts</DependentUpon>
+    </Content>
     <Content Include="app\main.js">
       <SubType>Content</SubType>
       <DependentUpon>app\main.ts</DependentUpon>
@@ -7652,6 +7656,9 @@
     <Content Include="node_modules\%40angular\upgrade\upgrade.metadata.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\hammerjs\hammer.min.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.min.js">
       <SubType>Content</SubType>
     </Content>
@@ -9789,6 +9796,7 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.html" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
+    <TypeScriptCompile Include="app\directives\gestures.directive.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\article.model.ts" />
     <TypeScriptCompile Include="app\models\branding.model.ts" />
@@ -11454,12 +11462,15 @@
     <TypeScriptCompile Include="typings\cordova\plugins\Vibration.d.ts" />
     <TypeScriptCompile Include="typings\cordova\plugins\WebSQL.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
+    <TypeScriptCompile Include="typings\hammerjs\hammerjs.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\articles-list\" />
     <Folder Include="app\models\" />
     <Folder Include="app\components\" />
+    <Folder Include="app\directives\" />
     <Folder Include="app\services\" />
     <Folder Include="App_Resources\" />
     <Folder Include="App_Resources\Android\" />
@@ -11481,6 +11492,7 @@
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
+    <Folder Include="node_modules\hammerjs\" />
     <Folder Include="styles\" />
     <Folder Include="node_modules\" />
     <Folder Include="node_modules\%40angular\" />
@@ -11710,6 +11722,7 @@
     <Folder Include="typings\cordova\plugins\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\core-js\" />
+    <Folder Include="typings\hammerjs\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <TypeScriptTarget>Unknown</TypeScriptTarget>

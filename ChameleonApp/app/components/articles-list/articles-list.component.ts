@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CarouselComponent } from 'ng2-bootstrap/components/carousel/carousel.component';
 import { SlideComponent } from 'ng2-bootstrap/components/carousel/slide.component';
+import { GesturesDirective } from '../../directives/gestures.directive';
 
-import { Observable } from 'rxjs/Observable';
 import { Article } from '../../models/article.model';
 import { Branding } from '../../models/branding.model';
 
@@ -10,7 +10,7 @@ import { ArticlesService } from '../../services/articles.service';
 import { BrandingService } from '../../services/branding.service';
 
 @Component({
-	directives: [CarouselComponent, SlideComponent],
+	directives: [CarouselComponent, SlideComponent, GesturesDirective],
 	selector: 'articles-list',
 	templateUrl: 'app/components/articles-list/articles-list.component.html',
 	styleUrls: ['app/components/articles-list/articles-list.component.css']
@@ -19,11 +19,21 @@ export class ArticlesComponent implements OnInit {
 	branding: Branding;
 	slides: Article[];
 	articles: Article[];
+	@ViewChild(CarouselComponent)
+	topArticlesComponent: CarouselComponent;
 
 	constructor(
 		private articlesService: ArticlesService,
 		private brandingService: BrandingService
 	) { }
+
+	doSwipe(direction: string) {
+		if (direction == GesturesDirective.events.swipeRight) {
+			this.topArticlesComponent.prev();
+		} else if (direction == GesturesDirective.events.swipeLeft) {
+			this.topArticlesComponent.next();
+		}
+	}
 
 	ngOnInit() {
 		let that = this;
