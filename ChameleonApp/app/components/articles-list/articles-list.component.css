@@ -25,3 +25,16 @@
 .article-thumbnail-image {
 	height:100px;
 }
+
+.top-article-title-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+	right: 0%;
+	left: 0%;
+	bottom: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.top-article-title {
+	margin: 20px 10px;
+}

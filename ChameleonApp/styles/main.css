@@ -1,8 +1,13 @@
 body {
-	word-wrap:break-word;
+	word-wrap: break-word;
+	background-color: #F6F6F6;
 }
 
 .article-title {
 	font-size: 15px;
 	font-weight: 600;
+}
+
+.carousel-indicators {
+	top: 115px;
 }

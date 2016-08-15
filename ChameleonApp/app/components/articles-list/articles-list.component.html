@@ -1,19 +1,13 @@
 <nav *ngIf="branding">
-    <!--<div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand">-->
-                <img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
-            <!--</a>
-        </div>
-    </div>-->
+	<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
 </nav>
 
 <!--TODO: take a look at trackBy for performance-->
 <carousel *ngIf="branding" [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
 	<slide *ngFor="let article of slides; let index=index" [active]="article.Active">
 		<img class="top-article-image img-responsive" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
-		<div class="carousel-caption">
-			<p>{{article.title}}</p>
+		<div class="top-article-title-wrapper carousel-caption">
+			<p class="top-article-title">{{article.title}}</p>
 		</div>
 	</slide>
 </carousel>
@@ -21,7 +15,7 @@
 <!--<div *ngFor="let article of articles">{{article.title}}</div>-->
 <div class="container-fluid all-articles-wrapper">
 	<div class="row" style="display:flex; flex-wrap: wrap;">
-		<div class="clearfix col-xs-6" *ngFor="let article of articles">
+		<div class="clearfix col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
 			<div class="thumbnail">
 				<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 				<div class="caption">

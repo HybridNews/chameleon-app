@@ -29,43 +29,56 @@
     <Content Include=".gitignore" />
     <Content Include="app\app.component.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\app.component.ts</DependentUpon>
     </Content>
     <Content Include="app\app.config.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\app.config.ts</DependentUpon>
     </Content>
     <Content Include="app\app.module.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\app.module.ts</DependentUpon>
     </Content>
     <Content Include="app\components\articles-list\articles-list.component.css" />
     <Content Include="app\components\articles-list\articles-list.component.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\components\articles-list\articles-list.component.ts</DependentUpon>
     </Content>
     <Content Include="app\main.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\main.ts</DependentUpon>
     </Content>
     <Content Include="app\models\article.model.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\models\article.model.ts</DependentUpon>
     </Content>
     <Content Include="app\models\branding.model.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\models\branding.model.ts</DependentUpon>
     </Content>
     <Content Include="app\models\rss-channel.model.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\models\rss-channel.model.ts</DependentUpon>
     </Content>
     <Content Include="app\services\articles.service.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\services\articles.service.ts</DependentUpon>
     </Content>
     <Content Include="app\services\branding.service.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\services\branding.service.ts</DependentUpon>
     </Content>
     <Content Include="app\services\http.service.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\services\http.service.ts</DependentUpon>
     </Content>
     <Content Include="app\services\rss-feed.service.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\services\rss-feed.service.ts</DependentUpon>
     </Content>
     <Content Include="app\services\xml-to-json.service.js">
       <SubType>Content</SubType>
+      <DependentUpon>app\services\xml-to-json.service.ts</DependentUpon>
     </Content>
     <Content Include="node_modules\%40angular\common\bundles\common.umd.js">
       <SubType>Content</SubType>
@@ -9690,6 +9703,7 @@
     <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\libs\jshybugger-library.jar" />
     <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\cordova\JsHybuggerPlugin.java" />
     <Content Include="Plugins\jshybugger-plugin-4.5.9\www\jsHybuggerLoader.js" />
+    <Content Include="styles\main.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="typings.json" />
     <None Include=".abignore" />
@@ -11467,6 +11481,7 @@
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
+    <Folder Include="styles\" />
     <Folder Include="node_modules\" />
     <Folder Include="node_modules\%40angular\" />
     <Folder Include="node_modules\%40angular\common\" />
