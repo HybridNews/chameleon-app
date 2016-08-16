@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CarouselComponent } from 'ng2-bootstrap/components/carousel/carousel.component';
 import { SlideComponent } from 'ng2-bootstrap/components/carousel/slide.component';
-import { GesturesDirective } from '../../directives/gestures.directive';
+import { PullToRefreshComponent } from '../../components/pull-to-refresh/pull-to-refresh.component';
+import { GesturesDirective } from '../../directives/gestures/gestures.directive';
 
 import { Article } from '../../models/article.model';
 import { Branding } from '../../models/branding.model';
@@ -10,7 +11,7 @@ import { ArticlesService } from '../../services/articles.service';
 import { BrandingService } from '../../services/branding.service';
 
 @Component({
-	directives: [CarouselComponent, SlideComponent, GesturesDirective],
+	directives: [CarouselComponent, SlideComponent, GesturesDirective, PullToRefreshComponent],
 	selector: 'articles-list',
 	templateUrl: 'app/components/articles-list/articles-list.component.html',
 	styleUrls: ['app/components/articles-list/articles-list.component.css']
@@ -33,6 +34,10 @@ export class ArticlesComponent implements OnInit {
 		} else if (direction == GesturesDirective.events.swipeLeft) {
 			this.topArticlesComponent.next();
 		}
+	}
+
+	reloadArticles() {
+		var a = 1;
 	}
 
 	ngOnInit() {

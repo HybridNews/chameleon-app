@@ -1,28 +1,30 @@
-<nav *ngIf="branding">
-	<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
-</nav>
+<div pull-to-refresh (onRefresh)="reloadArticles()">
+	<nav *ngIf="branding">
+		<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
+	</nav>
 
-<!--TODO: take a look at trackBy for performance-->
-<carousel #topArticlesComponent *ngIf="branding"
-		  gestures (onGesture)="doSwipe($event)"
-		  [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
-	<slide *ngFor="let article of slides; let index=index" [(active)]="article.active">
-		<img class="top-article-image img-responsive" 
-			 [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
-		<div class="top-article-title-wrapper carousel-caption">
-			<p class="top-article-title">{{article.title}}</p>
-		</div>
-	</slide>
-</carousel>
+	<!--TODO: take a look at trackBy for performance-->
+	<carousel #topArticlesComponent *ngIf="branding"
+			  gestures (onGesture)="doSwipe($event)"
+			  [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
+		<slide *ngFor="let article of slides; let index=index" [(active)]="article.active">
+			<img class="top-article-image img-responsive"
+				 [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
+			<div class="top-article-title-wrapper carousel-caption">
+				<p class="top-article-title">{{article.title}}</p>
+			</div>
+		</slide>
+	</carousel>
 
-<div class="container-fluid all-articles-wrapper">
-	<div class="row" style="display:flex; flex-wrap: wrap;">
-		<div class="clearfix col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
-			<div class="thumbnail">
-				<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
-				<div class="caption">
-					<h2 class="text-left article-title">{{article.title}}</h2>
-					<p class="text-left">{{article.description}}</p>
+	<div class="container-fluid all-articles-wrapper">
+		<div class="row" style="display:flex; flex-wrap: wrap;">
+			<div class="clearfix col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
+				<div class="thumbnail">
+					<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
+					<div class="caption">
+						<h2 class="text-left article-title">{{article.title}}</h2>
+						<p class="text-left">{{article.description}}</p>
+					</div>
 				</div>
 			</div>
 		</div>

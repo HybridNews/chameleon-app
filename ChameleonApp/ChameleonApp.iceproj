@@ -44,10 +44,16 @@
       <SubType>Content</SubType>
       <DependentUpon>app\components\articles-list\articles-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\directives\gestures.directive.js">
+    <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.js">
       <SubType>Content</SubType>
-      <DependentUpon>app\directives\gestures.directive.ts</DependentUpon>
+      <DependentUpon>app\components\pull-to-refresh\pull-to-refresh.component.ts</DependentUpon>
     </Content>
+    <Content Include="app\directives\gestures\gestures.directive.js">
+      <SubType>Content</SubType>
+      <DependentUpon>app\directives\gestures\gestures.directive.ts</DependentUpon>
+    </Content>
+    <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.html" />
+    <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.css" />
     <Content Include="app\main.js">
       <SubType>Content</SubType>
       <DependentUpon>app\main.ts</DependentUpon>
@@ -9796,7 +9802,8 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.html" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
-    <TypeScriptCompile Include="app\directives\gestures.directive.ts" />
+    <TypeScriptCompile Include="app\directives\gestures\gestures.directive.ts" />
+    <TypeScriptCompile Include="app\components\pull-to-refresh\pull-to-refresh.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\article.model.ts" />
     <TypeScriptCompile Include="app\models\branding.model.ts" />
@@ -11468,6 +11475,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\articles-list\" />
+    <Folder Include="app\components\pull-to-refresh\" />
+    <Folder Include="app\directives\gestures\" />
     <Folder Include="app\models\" />
     <Folder Include="app\components\" />
     <Folder Include="app\directives\" />

@@ -1,4 +1,3 @@
-/// <reference path="../../typings/hammerjs/hammerjs.d.ts" />
 import {Directive, ElementRef, AfterViewInit, Output, EventEmitter} from '@angular/core';
 
 @Directive({
@@ -22,22 +21,22 @@ export class GesturesDirective implements AfterViewInit {
 		let that = this;
         if (!GesturesDirective.hammerInitialized) {
 
-            let hammertime = new Hammer(that.el.nativeElement);
+            let hammertime = new Hammer(that.el.nativeElement, { touchAction: "auto" });
             hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
             hammertime.on(GesturesDirective.events.swipeUp, (ev) => {
-                this.onGesture.emit(GesturesDirective.events.swipeUp);
+                that.onGesture.emit(GesturesDirective.events.swipeUp);
             });
             hammertime.on(GesturesDirective.events.swipeDown, (ev) => {
-                this.onGesture.emit(GesturesDirective.events.swipeDown);
+                that.onGesture.emit(GesturesDirective.events.swipeDown);
             });
             hammertime.on(GesturesDirective.events.swipeLeft, (ev) => {
-                this.onGesture.emit(GesturesDirective.events.swipeLeft);
+                that.onGesture.emit(GesturesDirective.events.swipeLeft);
             });
             hammertime.on(GesturesDirective.events.swipeRight, (ev) => {
-                this.onGesture.emit(GesturesDirective.events.swipeRight);
+                that.onGesture.emit(GesturesDirective.events.swipeRight);
             });
             hammertime.on(GesturesDirective.events.tap, (ev) => {
-                this.onGesture.emit(GesturesDirective.events.tap);
+                that.onGesture.emit(GesturesDirective.events.tap);
             });
 
             GesturesDirective.hammerInitialized = true;
