@@ -3,5 +3,7 @@
 	<span ng-bind="text[status]"></span>
 </div>
 <ng-content></ng-content>-->
-<div>TEST</div>
-<ng-content></ng-content>
+<div class="pull-to-refresh" #contentWrapper>{{status}}</div>
+<div>
+	<ng-content></ng-content>
+</div>

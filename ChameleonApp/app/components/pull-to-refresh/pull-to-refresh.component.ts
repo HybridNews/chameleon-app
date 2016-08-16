@@ -1,29 +1,55 @@
-import {Component, ElementRef, AfterViewInit, Output, EventEmitter} from '@angular/core';
+import {Component, ElementRef, AfterContentInit, Output, EventEmitter, ViewChild} from '@angular/core';
 
 @Component({
     selector: '[pull-to-refresh]',
-	templateUrl: 'app/components/pull-to-refresh/pull-to-refresh.component.html'
+	templateUrl: 'app/components/pull-to-refresh/pull-to-refresh.component.html',
+	styleUrls: ['app/components/pull-to-refresh/pull-to-refresh.component.css']
 })
-export class PullToRefreshComponent implements AfterViewInit {
+export class PullToRefreshComponent implements AfterContentInit {
+	@ViewChild('contentWrapper') refreshElement: ElementRef;
     @Output() onRefresh = new EventEmitter();
     static hammerInitialized = false;
+	status: string;
+
     constructor(private el: ElementRef) {
     }
 
-    ngAfterViewInit() {
+    ngAfterContentInit() {
 		let that = this;
         if (!PullToRefreshComponent.hammerInitialized) {
 
             let hammertime = new Hammer(that.el.nativeElement, { touchAction: "auto" });
-            hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-            hammertime.on("swipedown", (ev) => {
-                var a = 0;
-				that.onRefresh.emit("swipedown");
+            hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+
+			hammertime.on("panstart", (ev) => {
+				if (ev.direction !== Hammer.DIRECTION_DOWN) {
+					return;
+				}
+
+				that.refreshElement.nativeElement.style.margin = '0 auto';
+				that.status = 'pull to refresh';
             });
 
-			hammertime.on("swipeup", (ev) => {
-                var a = 0;
-				that.onRefresh.emit("swipeup");
+			hammertime.on("panmove", (ev) => {
+				if (ev.direction !== Hammer.DIRECTION_DOWN) {
+					return;
+				}
+
+				if (document.body.scrollTop < 5) {
+					that.refreshElement.nativeElement.style.margin = '0 auto';
+					that.status = 'release to refresh';
+				}
+            });
+
+			hammertime.on("panend", (ev) => {
+				if (document.body.scrollTop == 0) {
+					that.status = 'loading';
+					that.onRefresh.emit();
+					that.refreshElement.nativeElement.style.margin = '';
+				} else if (document.body.scrollTop < 40) {
+					that.refreshElement.nativeElement.style.margin = '';
+				}
             });
 
             PullToRefreshComponent.hammerInitialized = true;
