@@ -1,15 +1,16 @@
-import {Component, ElementRef, AfterContentInit, Output, EventEmitter, ViewChild} from '@angular/core';
+import {Component, ElementRef, AfterContentInit, Input, EventEmitter, ViewChild} from '@angular/core';
 
 @Component({
-    selector: '[pull-to-refresh]',
+    selector: 'pull-to-refresh',
 	templateUrl: 'app/components/pull-to-refresh/pull-to-refresh.component.html',
 	styleUrls: ['app/components/pull-to-refresh/pull-to-refresh.component.css']
 })
 export class PullToRefreshComponent implements AfterContentInit {
-	@ViewChild('contentWrapper') refreshElement: ElementRef;
-    @Output() onRefresh = new EventEmitter();
+	@ViewChild('refreshWrapper') refreshElement: ElementRef;
+    @Input() onRefresh: Function;
     static hammerInitialized = false;
 	status: string;
+	treshold: number = 60;
 
     constructor(private el: ElementRef) {
     }
@@ -27,8 +28,13 @@ export class PullToRefreshComponent implements AfterContentInit {
 					return;
 				}
 
+				let bodyTop = document.body.scrollTop;
+				let contentTop = that.el.nativeElement.getBoundingClientRect().top;
+				let refreshTop = that.refreshElement.nativeElement.getBoundingClientRect().top;
+				that.refreshElement.nativeElement.style.webkitTransitionDuration = 0;
+				that.refreshElement.nativeElement.style.transitionDuration = 0;
 				that.refreshElement.nativeElement.style.margin = '0 auto';
-				that.status = 'pull to refresh';
+				that.status = 'pull to refresh' + ', ' + bodyTop + ', ' + contentTop + ', ' + refreshTop;
             });
 
 			hammertime.on("panmove", (ev) => {
@@ -36,19 +42,34 @@ export class PullToRefreshComponent implements AfterContentInit {
 					return;
 				}
 
+				let bodyTop = document.body.scrollTop;
+				let contentTop = that.el.nativeElement.getBoundingClientRect().top;
+				let refreshTop = that.refreshElement.nativeElement.getBoundingClientRect().top;
 				if (document.body.scrollTop < 5) {
+					that.refreshElement.nativeElement.style.webkitTransitionDuration = 0;
+					that.refreshElement.nativeElement.style.transitionDuration = 0;
 					that.refreshElement.nativeElement.style.margin = '0 auto';
-					that.status = 'release to refresh';
+					// 20 80 40
+					that.status = 'release to refresh' + ', ' + bodyTop + ', ' + contentTop + ', ' + refreshTop;
 				}
             });
 
 			hammertime.on("panend", (ev) => {
+				let bodyTop = document.body.scrollTop;
+				let contentTop = that.el.nativeElement.getBoundingClientRect().top;
+				let refreshTop = that.refreshElement.nativeElement.getBoundingClientRect().top;
+
 				if (document.body.scrollTop == 0) {
-					that.status = 'loading';
-					that.onRefresh.emit();
-					that.refreshElement.nativeElement.style.margin = '';
+					that.status = 'loading' + ', ' + ', ' + bodyTop + ', ' + contentTop + ', ' + refreshTop;
+					that.onRefresh().then(values => {
+						that.refreshElement.nativeElement.style.margin = '';
+						that.refreshElement.nativeElement.style.webkitTransitionDuration = '';
+						that.refreshElement.nativeElement.style.transitionDuration = '';
+					});
 				} else if (document.body.scrollTop < 40) {
 					that.refreshElement.nativeElement.style.margin = '';
+					that.refreshElement.nativeElement.style.webkitTransitionDuration = '';
+					that.refreshElement.nativeElement.style.transitionDuration = '';
 				}
             });
 

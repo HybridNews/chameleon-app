@@ -22,6 +22,7 @@ export class ArticlesComponent implements OnInit {
 	articles: Article[];
 	@ViewChild(CarouselComponent)
 	topArticlesComponent: CarouselComponent;
+	reloadArticles: Function;
 
 	constructor(
 		private articlesService: ArticlesService,
@@ -36,17 +37,19 @@ export class ArticlesComponent implements OnInit {
 		}
 	}
 
-	reloadArticles() {
-		var a = 1;
+	ngOnInit() {
+		this.reloadArticles = this._loadArticles.bind(this);
+		this._loadArticles();
 	}
 
-	ngOnInit() {
+	_loadArticles() {
 		let that = this;
-		Promise.all([this.brandingService.getBranding(), this.articlesService.getArticles()]).then(values => {
+
+		return Promise.all([that.brandingService.getBranding(), that.articlesService.getArticles()]).then(values => {
 			that.branding = values[0];
 			let allArticles = values[1];
-			that.articles = allArticles.slice(this.branding.topArticlesCount);
-			that.slides = allArticles.slice(0, this.branding.topArticlesCount);
+			that.articles = allArticles.slice(that.branding.topArticlesCount);
+			that.slides = allArticles.slice(0, that.branding.topArticlesCount);
 		});
 	}
 }

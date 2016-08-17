@@ -1,8 +1,8 @@
-<div pull-to-refresh (onRefresh)="reloadArticles()">
-	<nav *ngIf="branding">
-		<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
-	</nav>
+<nav *ngIf="branding">
+	<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
+</nav>
 
+<pull-to-refresh [onRefresh]="reloadArticles">
 	<!--TODO: take a look at trackBy for performance-->
 	<carousel #topArticlesComponent *ngIf="branding"
 			  gestures (onGesture)="doSwipe($event)"
@@ -29,4 +29,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</pull-to-refresh>

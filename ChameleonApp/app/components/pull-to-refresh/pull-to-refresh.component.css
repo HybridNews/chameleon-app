@@ -20,4 +20,5 @@
   -webkit-transform: translateZ(0px);
   -moz-transform: translateZ(0px);
   transform: translateZ(0px);
+  z-index: -1;
 }
