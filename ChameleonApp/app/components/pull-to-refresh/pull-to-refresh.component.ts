@@ -10,6 +10,14 @@ export class PullToRefreshComponent implements AfterContentInit {
 	@ViewChild('refreshWrapper') refreshElement: ElementRef;
     @Input() onRefresh: Function;
 	status: string;
+	statusMessages = {
+		'release': '? release to reload',
+		'loading': ''
+	};
+	statusIcons = {
+		'release': '',
+		'loading': 'resources/loading.gif'
+	};
 	isVisible: boolean = false;
 	shouldReload: boolean = false;
 
@@ -22,11 +30,20 @@ export class PullToRefreshComponent implements AfterContentInit {
 
 			let hammertime = new Hammer(that.contentElement.nativeElement, { touchAction: "auto" });
 			hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
 			hammertime.on("panstart", (ev) => {
+				if (ev.direction !== Hammer.DIRECTION_DOWN) {
+					return;
+				}
+
 				that._onMove(false);
 			});
 
 			hammertime.on("panmove", (ev) => {
+				if (ev.direction !== Hammer.DIRECTION_DOWN) {
+					return;
+				}
+
 				that._onMove(false);
 			});
 

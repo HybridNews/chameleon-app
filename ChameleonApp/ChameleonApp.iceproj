@@ -9716,6 +9716,9 @@
     <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\libs\jshybugger-library.jar" />
     <Content Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\cordova\JsHybuggerPlugin.java" />
     <Content Include="Plugins\jshybugger-plugin-4.5.9\www\jsHybuggerLoader.js" />
+    <Content Include="resources\loading.gif">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="styles\main.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="typings.json" />
@@ -11502,6 +11505,7 @@
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
     <Folder Include="node_modules\hammerjs\" />
+    <Folder Include="resources\" />
     <Folder Include="styles\" />
     <Folder Include="node_modules\" />
     <Folder Include="node_modules\%40angular\" />

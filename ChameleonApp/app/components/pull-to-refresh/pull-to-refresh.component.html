@@ -1,11 +1,4 @@
-<!--<div class="pull-to-refresh">
-	<i ng-class="icon[status]"></i>&nbsp;
-	<span ng-bind="text[status]"></span>
+<div class="pull-to-refresh" #refreshWrapper>
+	<img *ngIf="statusIcons[status]" class="small-loader" [src]="statusIcons[status]">{{statusMessages[status]}}
 </div>
-<ng-content></ng-content>-->
-<div class="pull-to-refresh" #refreshWrapper>{{status}}</div>
-<div class="pull-to-refresh-hint">pull to realod</div>
-<div class="arrow-down"></div>
-<div>
-	<ng-content></ng-content>
-</div>
+<ng-content></ng-content>
