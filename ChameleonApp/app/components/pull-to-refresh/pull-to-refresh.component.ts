@@ -10,33 +10,23 @@ export class PullToRefreshComponent implements AfterContentInit {
 	@ViewChild('refreshWrapper') refreshElement: ElementRef;
     @Input() onRefresh: Function;
 	status: string;
-	treshold: number = 60;
 	isVisible: boolean = false;
 	shouldReload: boolean = false;
 
-    constructor(private el: ElementRef) {
+    constructor(private contentElement: ElementRef) {
     }
 
 	ngAfterContentInit() {
 		let that = this;
 		if (!PullToRefreshComponent.hammerInitialized) {
 
-			let hammertime = new Hammer(that.el.nativeElement, { touchAction: "auto" });
+			let hammertime = new Hammer(that.contentElement.nativeElement, { touchAction: "auto" });
 			hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
 			hammertime.on("panstart", (ev) => {
-				if (ev.direction !== Hammer.DIRECTION_DOWN) {
-					return;
-				}
-
 				that._onMove(false);
 			});
 
 			hammertime.on("panmove", (ev) => {
-				if (ev.direction !== Hammer.DIRECTION_DOWN) {
-					return;
-				}
-
 				that._onMove(false);
 			});
 
@@ -51,10 +41,6 @@ export class PullToRefreshComponent implements AfterContentInit {
 	_onMove(endMoove: boolean) {
 		let that = this;
 		let bodyTop = document.body.scrollTop;
-		let contentTop = that.el.nativeElement.getBoundingClientRect().top;
-		let refreshTop = that.refreshElement.nativeElement.getBoundingClientRect().top;
-		let contentStartTop = bodyTop + contentTop;
-
 		if (endMoove) {
 			if (that.shouldReload && bodyTop === 0) {
 				that._setStatus('loading');
@@ -67,6 +53,8 @@ export class PullToRefreshComponent implements AfterContentInit {
 		} else if (bodyTop === 0) {
 			that._setStatus('release');
 			that._showPullToRefresh();
+		} else {
+			that._hidePullToRefresh();
 		}
 	}
 
