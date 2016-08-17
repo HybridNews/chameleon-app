@@ -18,8 +18,8 @@ import { BrandingService } from '../../services/branding.service';
 })
 export class ArticlesComponent implements OnInit {
 	branding: Branding;
-	slides: Article[];
-	articles: Article[];
+	slides: Article[] = [];
+	articles: Article[] = [];
 	@ViewChild(CarouselComponent)
 	topArticlesComponent: CarouselComponent;
 	reloadArticles: Function;
@@ -44,12 +44,13 @@ export class ArticlesComponent implements OnInit {
 
 	_loadArticles() {
 		let that = this;
-
 		return Promise.all([that.brandingService.getBranding(), that.articlesService.getArticles()]).then(values => {
 			that.branding = values[0];
 			let allArticles = values[1];
-			that.articles = allArticles.slice(that.branding.topArticlesCount);
-			that.slides = allArticles.slice(0, that.branding.topArticlesCount);
+			that.articles.length = 0;
+			that.slides.length = 0;
+			that.articles.push(...allArticles.slice(that.branding.topArticlesCount));
+			that.slides.push(...allArticles.slice(0, that.branding.topArticlesCount));
 		});
 	}
 }
