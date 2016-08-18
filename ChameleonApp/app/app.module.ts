@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_PROVIDERS } from '@angular/http';
 
+import { routing, appRoutingProviders } from './app.routing';
+
 import { AppComponent }  from './app.component';
 import { ArticlesComponent } from './components/articles-list/articles-list.component';
 
@@ -14,9 +16,9 @@ import { BrandingService } from './services/branding.service';
 import 'rxjs/add/operator/toPromise';
 
 @NgModule({
-	imports: [BrowserModule],
+	imports: [BrowserModule, routing],
 	declarations: [AppComponent, ArticlesComponent],
 	bootstrap: [AppComponent],
-	providers: [HTTP_PROVIDERS, ArticlesService, XmlToJsonService, HttpService, RssFeedService, BrandingService]
+	providers: [HTTP_PROVIDERS, ArticlesService, XmlToJsonService, HttpService, RssFeedService, BrandingService, appRoutingProviders]
 })
 export class AppModule { }
