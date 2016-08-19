@@ -56,7 +56,7 @@
       <SubType>Content</SubType>
       <DependentUpon>app\directives\gestures\gestures.directive.ts</DependentUpon>
     </Content>
-    <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.html" />
+	<Content Include="app\components\pull-to-refresh\pull-to-refresh.component.html" />
     <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.css" />
     <Content Include="app\main.js">
       <SubType>Content</SubType>
@@ -9808,7 +9808,7 @@
     <TypeScriptCompile Include="app\app.config.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
-    <TypeScriptCompile Include="app\components\articles-list\articles-list.component.html" />
+	<Content Include="app\components\articles-list\articles-list.component.html" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
     <TypeScriptCompile Include="app\directives\gestures\gestures.directive.ts" />
     <TypeScriptCompile Include="app\components\pull-to-refresh\pull-to-refresh.component.ts" />

@@ -4,4 +4,5 @@ import { Component } from '@angular/core';
     selector: 'chameleon-news',
     template: '<router-outlet></router-outlet>'
 })
-export class AppComponent { }
+export class AppComponent { 
+}

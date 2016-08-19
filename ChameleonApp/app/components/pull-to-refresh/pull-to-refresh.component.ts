@@ -16,7 +16,7 @@ export class PullToRefreshComponent implements AfterContentInit {
 	};
 	statusIcons = {
 		'release': '',
-		'loading': '/resources/loading.gif'
+		'loading': 'resources/loading.gif'
 	};
 	isVisible: boolean = false;
 	shouldReload: boolean = false;
