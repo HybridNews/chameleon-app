@@ -9733,6 +9733,15 @@
     <Content Include="styles\main.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="typings.json" />
+    <Content Include="typings\globals\cordova\typings.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="typings\globals\hammerjs\typings.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="typings\globals\underscore\typings.json">
+      <SubType>Content</SubType>
+    </Content>
     <None Include=".abignore" />
     <Content Include=".abproject" />
     <Content Include=".debug.abproject" />
@@ -11464,28 +11473,10 @@
     <TypeScriptCompile Include="node_modules\rxjs\util\toSubscriber.d.ts" />
     <TypeScriptCompile Include="node_modules\rxjs\util\tryCatch.d.ts" />
     <TypeScriptCompile Include="node_modules\rxjs\util\UnsubscriptionError.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\cordova.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\simulator.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\BatteryStatus.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Camera.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Contacts.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Device.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\DeviceMotion.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\DeviceOrientation.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Dialogs.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\FileSystem.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\FileTransfer.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Globalization.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\InAppBrowser.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Media.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\MediaCapture.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\NetworkInformation.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Push.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Splashscreen.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\Vibration.d.ts" />
-    <TypeScriptCompile Include="typings\cordova\plugins\WebSQL.d.ts" />
+    <TypeScriptCompile Include="typings\globals\cordova\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
-    <TypeScriptCompile Include="typings\hammerjs\hammerjs.d.ts" />
+    <TypeScriptCompile Include="typings\globals\hammerjs\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\underscore\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
@@ -11745,11 +11736,11 @@
     <Folder Include="Plugins\jshybugger-plugin-4.5.9\src\android\org\jshybugger\cordova\" />
     <Folder Include="Plugins\jshybugger-plugin-4.5.9\www\" />
     <Folder Include="typings\" />
-    <Folder Include="typings\cordova\" />
-    <Folder Include="typings\cordova\plugins\" />
     <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\cordova\" />
     <Folder Include="typings\globals\core-js\" />
-    <Folder Include="typings\hammerjs\" />
+    <Folder Include="typings\globals\hammerjs\" />
+    <Folder Include="typings\globals\underscore\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <TypeScriptTarget>Unknown</TypeScriptTarget>

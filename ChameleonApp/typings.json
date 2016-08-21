@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
+    "cordova": "registry:dt/cordova#0.0.0+20160607055823",
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
     "hammerjs": "registry:dt/hammerjs#2.0.8+20160724063812",
     "underscore": "registry:dt/underscore#1.7.0+20160805164035"
