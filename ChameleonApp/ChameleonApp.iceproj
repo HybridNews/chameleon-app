@@ -56,7 +56,7 @@
       <SubType>Content</SubType>
       <DependentUpon>app\directives\gestures\gestures.directive.ts</DependentUpon>
     </Content>
-	<Content Include="app\components\pull-to-refresh\pull-to-refresh.component.html" />
+    <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.html" />
     <Content Include="app\components\pull-to-refresh\pull-to-refresh.component.css" />
     <Content Include="app\main.js">
       <SubType>Content</SubType>
@@ -73,6 +73,10 @@
     <Content Include="app\models\rss-channel.model.js">
       <SubType>Content</SubType>
       <DependentUpon>app\models\rss-channel.model.ts</DependentUpon>
+    </Content>
+    <Content Include="app\services\articles-cache.service.js">
+      <SubType>Content</SubType>
+      <DependentUpon>app\services\articles-cache.service.ts</DependentUpon>
     </Content>
     <Content Include="app\services\articles.service.js">
       <SubType>Content</SubType>
@@ -9710,6 +9714,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="node_modules\systemjs\dist\system.js" />
+    <Content Include="node_modules\underscore\underscore-min.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\zone.js\dist\zone.min.js" />
     <Content Include="package.json">
       <SubType>Content</SubType>
@@ -9808,7 +9815,7 @@
     <TypeScriptCompile Include="app\app.config.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
-	<Content Include="app\components\articles-list\articles-list.component.html" />
+    <Content Include="app\components\articles-list\articles-list.component.html" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
     <TypeScriptCompile Include="app\directives\gestures\gestures.directive.ts" />
     <TypeScriptCompile Include="app\components\pull-to-refresh\pull-to-refresh.component.ts" />
@@ -9816,6 +9823,7 @@
     <TypeScriptCompile Include="app\models\article.model.ts" />
     <TypeScriptCompile Include="app\models\branding.model.ts" />
     <TypeScriptCompile Include="app\models\rss-channel.model.ts" />
+    <TypeScriptCompile Include="app\services\articles-cache.service.ts" />
     <TypeScriptCompile Include="app\services\branding.service.ts" />
     <TypeScriptCompile Include="app\services\http.service.ts" />
     <TypeScriptCompile Include="app\services\articles.service.ts" />
@@ -11510,6 +11518,7 @@
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
     <Folder Include="node_modules\hammerjs\" />
+    <Folder Include="node_modules\underscore\" />
     <Folder Include="resources\" />
     <Folder Include="styles\" />
     <Folder Include="node_modules\" />

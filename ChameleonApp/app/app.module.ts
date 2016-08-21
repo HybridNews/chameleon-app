@@ -1,4 +1,4 @@
-import { NgModule, provide }      from '@angular/core';
+import { NgModule, provide } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { APP_BASE_HREF } from '@angular/common';
@@ -9,6 +9,7 @@ import { AppComponent }  from './app.component';
 import { ArticlesComponent } from './components/articles-list/articles-list.component';
 
 import { ArticlesService } from './services/articles.service';
+import { ArticlesCacheService } from './services/articles-cache.service';
 import { XmlToJsonService } from './services/xml-to-json.service';
 import { HttpService } from './services/http.service';
 import { RssFeedService } from './services/rss-feed.service';
@@ -20,7 +21,8 @@ import 'rxjs/add/operator/toPromise';
 	imports: [BrowserModule, routing],
 	declarations: [AppComponent, ArticlesComponent],
 	bootstrap: [AppComponent],
-	providers: [HTTP_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' }), ArticlesService, XmlToJsonService, HttpService, RssFeedService, BrandingService, appRoutingProviders]
+	providers: [HTTP_PROVIDERS, HttpService, provide(APP_BASE_HREF, { useValue: '/' }), appRoutingProviders,
+		ArticlesService, ArticlesCacheService, XmlToJsonService, RssFeedService, BrandingService]
 })
 export class AppModule {
 	constructor() {
