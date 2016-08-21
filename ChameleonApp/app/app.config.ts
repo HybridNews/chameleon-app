@@ -6,7 +6,8 @@ export const AppConfig = {
 	largeLogoUrl: "",
 	resourcesBaseUrl: "",
 	topArticlesCount: 5,
-	topArticlesIntervalInMs: 2000
+	topArticlesIntervalInMs: 2000,
+	maxArticlesCount: 200
 };
 
 

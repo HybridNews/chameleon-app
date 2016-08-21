@@ -17,17 +17,28 @@ export class ArticlesService {
 	public getArticles(): Promise<Article[]> {
 		let that = this;
 
-		return that.reloadArticles().then(that.cacheArticles);
+		return that.reloadArticles().then(that.cacheArticles.bind(that));
+	}
+
+	public getById(id: number): Promise<Article> {
+		let that = this;
+		let foundArticle = that.cacheService.getById(id);
+
+		return Promise.resolve<Article>(foundArticle);
 	}
 
 	private reloadArticles(): Promise<Article[]> {
-		var that = this;
+		let that = this;
 
 		return that.rssFeedService.getChannel()
 			.then(rssChannel => Promise.resolve(rssChannel.items));
 	}
 
 	private cacheArticles(articles: Article[]): Promise<Article[]> {
-		return Promise.resolve<Article[]>(articles);
+		let that = this;
+
+		let cachedArticles = that.cacheService.update(articles);
+
+		return Promise.resolve<Article[]>(cachedArticles);
 	}
 }

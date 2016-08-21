@@ -5,10 +5,10 @@
 <pull-to-refresh [onRefresh]="reloadArticles">
 	<!--TODO: take a look at trackBy for performance-->
 	<carousel #topArticlesComponent *ngIf="branding"
-			  gestures (onGesture)="doSwipe($event)"
+			  gestures (onGesture)="onTopArticlesSwipe($event)"
 			  [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
 		<slide *ngFor="let article of slides; let index=index" [(active)]="article.active">
-			<img class="top-article-image img-responsive"
+			<img class="top-article-image img-responsive" (click)="onArticleClick(article)"
 				 [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 			<div class="top-article-title-wrapper carousel-caption">
 				<p class="top-article-title">{{article.title}}</p>
@@ -19,7 +19,7 @@
 	<div class="container-fluid all-articles-wrapper">
 		<div class="row" style="display:flex; flex-wrap: wrap;">
 			<div class="clearfix col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
-				<div class="thumbnail">
+				<div class="thumbnail" (click)="onArticleClick(article)">
 					<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 					<div class="caption">
 						<h2 class="text-left article-title">{{article.title}}</h2>

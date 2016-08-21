@@ -11478,7 +11478,6 @@
     <TypeScriptCompile Include="typings\globals\hammerjs\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\underscore\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\articles-list\" />
