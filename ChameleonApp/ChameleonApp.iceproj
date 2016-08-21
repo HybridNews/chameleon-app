@@ -43,6 +43,11 @@
       <SubType>Content</SubType>
       <DependentUpon>app\app.routing.ts</DependentUpon>
     </Content>
+    <Content Include="app\components\article-details\article-details.component.js">
+      <SubType>Content</SubType>
+      <DependentUpon>app\components\article-details\article-details.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\components\article-details\article-details.component.html" />
     <Content Include="app\components\articles-list\articles-list.component.css" />
     <Content Include="app\components\articles-list\articles-list.component.js">
       <SubType>Content</SubType>
@@ -7670,6 +7675,18 @@
     <Content Include="node_modules\%40angular\upgrade\upgrade.metadata.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\font-awesome\css\font-awesome.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.woff2">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\hammerjs\hammer.min.js">
       <SubType>Content</SubType>
     </Content>
@@ -9825,6 +9842,7 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
     <Content Include="app\components\articles-list\articles-list.component.html" />
+    <TypeScriptCompile Include="app\components\article-details\article-details.component.ts" />
     <TypeScriptCompile Include="app\components\articles-list\articles-list.component.ts" />
     <TypeScriptCompile Include="app\directives\gestures\gestures.directive.ts" />
     <TypeScriptCompile Include="app\components\pull-to-refresh\pull-to-refresh.component.ts" />
@@ -11481,6 +11499,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\articles-list\" />
+    <Folder Include="app\components\article-details\" />
     <Folder Include="app\components\pull-to-refresh\" />
     <Folder Include="app\directives\gestures\" />
     <Folder Include="app\models\" />
@@ -11507,6 +11526,9 @@
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
+    <Folder Include="node_modules\font-awesome\" />
+    <Folder Include="node_modules\font-awesome\css\" />
+    <Folder Include="node_modules\font-awesome\fonts\" />
     <Folder Include="node_modules\hammerjs\" />
     <Folder Include="node_modules\underscore\" />
     <Folder Include="resources\" />

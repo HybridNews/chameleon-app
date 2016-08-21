@@ -19,7 +19,7 @@ export class GesturesDirective implements AfterViewInit {
     }
     ngAfterViewInit() {
 		let that = this;
-        if (!GesturesDirective.hammerInitialized) {
+        //if (!GesturesDirective.hammerInitialized) {
 
             let hammertime = new Hammer(that.el.nativeElement, { touchAction: "auto" });
             hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
@@ -40,6 +40,6 @@ export class GesturesDirective implements AfterViewInit {
             });
 
             GesturesDirective.hammerInitialized = true;
-        }
+        //}
     }
 }

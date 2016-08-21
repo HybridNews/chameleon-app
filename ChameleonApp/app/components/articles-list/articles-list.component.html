@@ -7,7 +7,7 @@
 	<carousel #topArticlesComponent *ngIf="branding"
 			  gestures (onGesture)="onTopArticlesSwipe($event)"
 			  [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
-		<slide *ngFor="let article of slides; let index=index" [(active)]="article.active">
+		<slide *ngFor="let article of slides; let index=index" (active)="article.active">
 			<img class="top-article-image img-responsive" (click)="onArticleClick(article)"
 				 [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 			<div class="top-article-title-wrapper carousel-caption">
