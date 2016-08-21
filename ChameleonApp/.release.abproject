@@ -18,6 +18,7 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "cordova-plugin-vibration",
-    "cordova-plugin-whitelist"
+    "cordova-plugin-whitelist",
+    "net.yoik.cordova.plugins.screenorientation@1.4.0"
   ]
 }

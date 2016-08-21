@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
 
+	<script src="cordova.js"></script>
 	<!-- ES2015 Polyfills -->
 	<script src="node_modules/hammerjs/hammer.min.js"></script>
 	<script src="node_modules/zone.js/dist/zone.min.js"></script>
@@ -16,10 +17,16 @@
 
 	<link href="styles/main.css" rel="stylesheet" />
 </head>
-<body>
+<body onload="onLoad()">
 	<chameleon-news>Loading...</chameleon-news>
 	<script>
-		System.import('app').catch(function (err) { console.error(err); });
+		function onLoad() {
+			document.addEventListener("deviceready", onDeviceReady, false);
+		}
+		function onDeviceReady() {
+			window.screen.lockOrientation('portrait');
+			System.import('app').catch(function (err) { console.error(err); });
+		}
 	</script>
 </body>
 </html>

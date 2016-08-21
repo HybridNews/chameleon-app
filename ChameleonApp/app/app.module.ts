@@ -22,4 +22,8 @@ import 'rxjs/add/operator/toPromise';
 	bootstrap: [AppComponent],
 	providers: [HTTP_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' }), ArticlesService, XmlToJsonService, HttpService, RssFeedService, BrandingService, appRoutingProviders]
 })
-export class AppModule { }
+export class AppModule {
+	constructor() {
+
+	}
+}
