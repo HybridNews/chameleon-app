@@ -1,58 +1,60 @@
-import {Component, ElementRef, AfterContentInit, Input, EventEmitter, ViewChild} from '@angular/core';
+import {Component, ElementRef, AfterContentInit, OnDestroy, Input, EventEmitter, ViewChild} from '@angular/core';
 
 @Component({
     selector: 'pull-to-refresh',
 	templateUrl: 'app/components/pull-to-refresh/pull-to-refresh.component.html',
 	styleUrls: ['app/components/pull-to-refresh/pull-to-refresh.component.css']
 })
-export class PullToRefreshComponent implements AfterContentInit {
-    static hammerInitialized = false;
+export class PullToRefreshComponent implements AfterContentInit, OnDestroy {
 	@ViewChild('refreshWrapper') refreshElement: ElementRef;
     @Input() onRefresh: Function;
-	status: string;
-	statusMessages = {
+	private statusMessages = {
 		'release': '? release to reload',
 		'loading': ''
 	};
-	statusIcons = {
+	private statusIcons = {
 		'release': '',
 		'loading': 'resources/loading.gif'
 	};
-	isVisible: boolean = false;
-	shouldReload: boolean = false;
+	private status: string;
+	private isVisible: boolean = false;
+	private shouldReload: boolean = false;
+	private hammer: HammerManager;
 
     constructor(private contentElement: ElementRef) {
     }
 
 	ngAfterContentInit() {
 		let that = this;
-		if (!PullToRefreshComponent.hammerInitialized) {
 
-			let hammertime = new Hammer(that.contentElement.nativeElement, { touchAction: "auto" });
-			hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+		that.hammer = new Hammer(that.contentElement.nativeElement, { touchAction: "auto" });
+		that.hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
-			hammertime.on("panstart", (ev) => {
-				if (ev.direction !== Hammer.DIRECTION_DOWN) {
-					return;
-				}
+		that.hammer.on("panstart", (ev) => {
+			if (ev.direction !== Hammer.DIRECTION_DOWN) {
+				return;
+			}
 
-				that._onMove(false);
-			});
+			that._onMove(false);
+		});
 
-			hammertime.on("panmove", (ev) => {
-				if (ev.direction !== Hammer.DIRECTION_DOWN) {
-					return;
-				}
+		that.hammer.on("panmove", (ev) => {
+			if (ev.direction !== Hammer.DIRECTION_DOWN) {
+				return;
+			}
 
-				that._onMove(false);
-			});
+			that._onMove(false);
+		});
 
-			hammertime.on("panend", (ev) => {
-				that._onMove(true);
-			});
+		that.hammer.on("panend", (ev) => {
+			that._onMove(true);
+		});
+	}
 
-			PullToRefreshComponent.hammerInitialized = true;
-		}
+	ngOnDestroy() {
+		let that = this;
+
+		that.hammer.destroy();
 	}
 
 	_onMove(endMoove: boolean) {

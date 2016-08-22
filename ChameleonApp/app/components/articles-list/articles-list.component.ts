@@ -40,7 +40,6 @@ export class ArticlesComponent implements OnInit {
 	}
 
 	onArticleClick(article: Article) {
-		console.log(article.id);
 		this.router.navigate(['/articles', article.id, "details"]);
 	}
 

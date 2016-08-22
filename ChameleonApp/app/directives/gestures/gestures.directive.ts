@@ -13,7 +13,7 @@ export class GesturesDirective implements AfterViewInit, OnDestroy {
 	};
 
     @Output() onGesture = new EventEmitter();
-	private hamer: HammerManager;
+	private hammer: HammerManager;
 
     constructor(private targetElement: ElementRef) {
     }
@@ -21,21 +21,21 @@ export class GesturesDirective implements AfterViewInit, OnDestroy {
     ngAfterViewInit() {
 		let that = this;
 
-		that.hamer = new Hammer(that.targetElement.nativeElement, { touchAction: "auto" });
-		that.hamer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-		that.hamer.on(GesturesDirective.events.swipeUp, (ev) => {
+		that.hammer = new Hammer(that.targetElement.nativeElement, { touchAction: "auto" });
+		that.hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+		that.hammer.on(GesturesDirective.events.swipeUp, (ev) => {
 			that.onGesture.emit(GesturesDirective.events.swipeUp);
 		});
-		that.hamer.on(GesturesDirective.events.swipeDown, (ev) => {
+		that.hammer.on(GesturesDirective.events.swipeDown, (ev) => {
 			that.onGesture.emit(GesturesDirective.events.swipeDown);
 		});
-		that.hamer.on(GesturesDirective.events.swipeLeft, (ev) => {
+		that.hammer.on(GesturesDirective.events.swipeLeft, (ev) => {
 			that.onGesture.emit(GesturesDirective.events.swipeLeft);
 		});
-		that.hamer.on(GesturesDirective.events.swipeRight, (ev) => {
+		that.hammer.on(GesturesDirective.events.swipeRight, (ev) => {
 			that.onGesture.emit(GesturesDirective.events.swipeRight);
 		});
-		that.hamer.on(GesturesDirective.events.tap, (ev) => {
+		that.hammer.on(GesturesDirective.events.tap, (ev) => {
 			that.onGesture.emit(GesturesDirective.events.tap);
 		});
     }
@@ -43,6 +43,6 @@ export class GesturesDirective implements AfterViewInit, OnDestroy {
 	ngOnDestroy() {
 		let that = this;
 
-		that.hamer.destroy();
+		that.hammer.destroy();
 	}
 }
