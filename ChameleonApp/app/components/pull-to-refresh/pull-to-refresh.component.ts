@@ -9,12 +9,12 @@ export class PullToRefreshComponent implements AfterContentInit, OnDestroy {
 	@ViewChild('refreshWrapper') refreshElement: ElementRef;
     @Input() onRefresh: Function;
 	private statusMessages = {
-		'release': '? release to reload',
+		'release': ' release to reload',
 		'loading': ''
 	};
 	private statusIcons = {
-		'release': '',
-		'loading': 'resources/loading.gif'
+		'release': 'fa fa-long-arrow-up',
+		'loading': 'fa fa-spinner'
 	};
 	private status: string;
 	private isVisible: boolean = false;
