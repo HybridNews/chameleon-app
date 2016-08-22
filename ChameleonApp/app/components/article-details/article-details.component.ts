@@ -3,8 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PullToRefreshComponent } from '../../components/pull-to-refresh/pull-to-refresh.component';
 
 import { Article } from '../../models/article.model';
+import { Branding } from '../../models/branding.model';
 
 import { ArticlesService } from '../../services/articles.service';
+import { BrandingService } from '../../services/branding.service';
 
 @Component({
 	directives: [PullToRefreshComponent],
@@ -13,12 +15,14 @@ import { ArticlesService } from '../../services/articles.service';
 })
 export class ArticleDetailsComponent implements OnInit {
 	private articleId: number;
+	private branding: Branding;
 	private currentArticle: Article;
 
 	constructor(
 		private router: Router,
 		private activateRoute: ActivatedRoute,
-		private articlesService: ArticlesService
+		private articlesService: ArticlesService,
+		private brandingService: BrandingService
 	) { }
 
 	ngOnInit() {
@@ -26,7 +30,9 @@ export class ArticleDetailsComponent implements OnInit {
 
 		that.articleId = this.activateRoute.snapshot.params['id'];
 		if (that.articleId) {
-			that.articlesService.getById(that.articleId).then(article => {
+			Promise.all([that.brandingService.getBranding(), that.articlesService.getById(that.articleId)]).then(values => {
+				that.branding = values[0];
+				let article = values[1];
 				if (!article) {
 					that.navigateToArticlesList();
 				} else {

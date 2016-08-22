@@ -7,7 +7,7 @@ export const AppConfig = {
 	resourcesBaseUrl: "",
 	topArticlesCount: 5,
 	topArticlesIntervalInMs: 2000,
-	maxArticlesCount: 200
+	maxArticlesCount: 100
 };
 
 
