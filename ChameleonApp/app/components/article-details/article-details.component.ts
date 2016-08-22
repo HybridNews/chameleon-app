@@ -11,7 +11,8 @@ import { BrandingService } from '../../services/branding.service';
 @Component({
 	directives: [PullToRefreshComponent],
 	selector: 'article-details',
-	templateUrl: 'app/components/article-details/article-details.component.html'
+	templateUrl: 'app/components/article-details/article-details.component.html',
+	styleUrls: ['app/components/article-details/article-details.component.css']
 })
 export class ArticleDetailsComponent implements OnInit {
 	private articleId: number;

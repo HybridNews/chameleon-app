@@ -1,13 +1,15 @@
-<nav *ngIf="currentArticle" class="navbar navbar-default">
+<nav *ngIf="currentArticle" class="navbar navbar-default article-details-header">
 	<div class="container-fluid">
 		<i class="fa fa-home fa-4x" (click)="navigateToArticlesList()"></i>
-		<p>Home</p>
+		<!--<p class="home">Home</p>-->
 	</div>
 </nav>
-<div *ngIf="currentArticle" class="thumbnail">
-	<h3>{{currentArticle.title}}</h3>
-	<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title">
-	<div class="caption">
+<div *ngIf="currentArticle">
+	<h3 class="article-details-title">{{currentArticle.title}}</h3>
+	<div class="article-details-image-wrapper">
+		<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title">
+	</div>
+	<div class="article-details-description">
 		<p>{{currentArticle.description}}</p>
 	</div>
 </div>
