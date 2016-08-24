@@ -43,6 +43,9 @@
       <SubType>Content</SubType>
       <DependentUpon>app\app.routing.ts</DependentUpon>
     </Content>
+    <Content Include="app\components\article-details\article-details.component.css">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="app\components\article-details\article-details.component.js">
       <SubType>Content</SubType>
       <DependentUpon>app\components\article-details\article-details.component.ts</DependentUpon>

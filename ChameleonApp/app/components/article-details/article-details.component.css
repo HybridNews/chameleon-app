@@ -1,14 +1,5 @@
-.home {
-	display: inline-block;
-	margin: 0;
-}
-
 .article-details-header {
 	background-color: white;
-}
-
-.article-details-image-wrapper {
-	text-align: center;
 }
 
 .article-details-description {

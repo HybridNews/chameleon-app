@@ -1,15 +1,13 @@
 <nav *ngIf="currentArticle" class="navbar navbar-default article-details-header">
 	<div class="container-fluid">
 		<i class="fa fa-home fa-4x" (click)="navigateToArticlesList()"></i>
-		<!--<p class="home">Home</p>-->
 	</div>
 </nav>
 <div *ngIf="currentArticle">
 	<h3 class="article-details-title">{{currentArticle.title}}</h3>
-	<div class="article-details-image-wrapper">
-		<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title">
-	</div>
+	<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title" class="center-block">
 	<div class="article-details-description">
 		<p>{{currentArticle.description}}</p>
 	</div>
+	<button type="button" class="btn btn-info center-block" (click)="goToFullArticle()">View full article in the browser</button>
 </div>

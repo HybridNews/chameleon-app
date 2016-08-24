@@ -45,6 +45,11 @@ export class ArticleDetailsComponent implements OnInit {
 		}
 	}
 
+	goToFullArticle() {
+		let that = this;
+		window.open(that.currentArticle.link, '_system');
+	}
+
 	navigateToArticlesList() {
 		let that = this;
 		that.router.navigate(["articles-list"]);
