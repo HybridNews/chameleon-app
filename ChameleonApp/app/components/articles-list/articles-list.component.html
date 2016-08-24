@@ -1,7 +1,7 @@
+<img *ngIf="!branding" class="loader ng-animate" src="resources/loader.gif" />
 <nav *ngIf="branding">
 	<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
 </nav>
-
 <pull-to-refresh [onRefresh]="reloadArticles">
 	<carousel #topArticlesComponent *ngIf="branding"
 			  gestures (onGesture)="onTopArticlesSwipe($event)"

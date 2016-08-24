@@ -14,7 +14,7 @@ export class PullToRefreshComponent implements AfterContentInit, OnDestroy {
 	};
 	private statusIcons = {
 		'release': 'fa fa-refresh',
-		'loading': 'fa fa-spinner'
+		'loading': 'fa fa-spinner fa-spin'
 	};
 	private status: string;
 	private isVisible: boolean = false;
