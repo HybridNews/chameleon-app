@@ -13,7 +13,7 @@ export class PullToRefreshComponent implements AfterContentInit, OnDestroy {
 		'loading': ''
 	};
 	private statusIcons = {
-		'release': 'fa fa-long-arrow-up',
+		'release': 'fa fa-refresh',
 		'loading': 'fa fa-spinner'
 	};
 	private status: string;

@@ -11,3 +11,18 @@ body {
 .carousel-indicators {
 	top: 115px;
 }
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	width: auto;
+	margin: auto;
+	zoom: 2;
+}
+
+.m-logo {
+	height: 40px;
+	width: 100%;
+}

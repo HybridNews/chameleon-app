@@ -18,12 +18,12 @@ import { BrandingService } from '../../services/branding.service';
 	styleUrls: ['app/components/articles-list/articles-list.component.css']
 })
 export class ArticlesComponent implements OnInit {
-	branding: Branding;
-	slides: Article[] = [];
-	articles: Article[] = [];
+	private branding: Branding;
+	private slides: Article[] = [];
+	private articles: Article[] = [];
 	@ViewChild(CarouselComponent)
-	topArticlesComponent: CarouselComponent;
-	reloadArticles: Function;
+	private topArticlesComponent: CarouselComponent;
+	private reloadArticles: Function;
 
 	constructor(
 		private router: Router,
@@ -31,24 +31,28 @@ export class ArticlesComponent implements OnInit {
 		private brandingService: BrandingService
 	) { }
 
-	onTopArticlesSwipe(direction: string) {
+	private onTopArticlesSwipe(direction: string) {
+		let that = this;
+
 		if (direction == GesturesDirective.events.swipeRight) {
-			this.topArticlesComponent.prev();
+			that.topArticlesComponent.prev();
 		} else if (direction == GesturesDirective.events.swipeLeft) {
-			this.topArticlesComponent.next();
+			that.topArticlesComponent.next();
 		}
 	}
 
-	onArticleClick(article: Article) {
-		this.router.navigate(['/articles', article.id, "details"]);
+	private onArticleClick(article: Article) {
+		let that = this;
+		that.router.navigate(['/articles', article.id, "details"]);
 	}
 
-	ngOnInit() {
-		this.reloadArticles = this._loadArticles.bind(this);
-		this._loadArticles();
+	public ngOnInit() {
+		let that = this;
+		that.reloadArticles = this.loadArticles.bind(this);
+		that.loadArticles();
 	}
 
-	_loadArticles() {
+	private loadArticles() {
 		let that = this;
 		return Promise.all([that.brandingService.getBranding(), that.articlesService.getArticles()]).then(values => {
 			that.branding = values[0];

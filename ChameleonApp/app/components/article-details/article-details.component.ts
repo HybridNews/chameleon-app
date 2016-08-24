@@ -18,6 +18,7 @@ export class ArticleDetailsComponent implements OnInit {
 	private articleId: number;
 	private branding: Branding;
 	private currentArticle: Article;
+	private reloadArticles: Function;
 
 	constructor(
 		private router: Router,
@@ -26,12 +27,19 @@ export class ArticleDetailsComponent implements OnInit {
 		private brandingService: BrandingService
 	) { }
 
-	ngOnInit() {
+	public ngOnInit() {
+		let that = this;
+
+		that.reloadArticles = this.loadArticles.bind(this);
+		that.loadArticles();
+	}
+
+	private loadArticles() {
 		let that = this;
 
 		that.articleId = this.activateRoute.snapshot.params['id'];
 		if (that.articleId) {
-			Promise.all([that.brandingService.getBranding(), that.articlesService.getById(that.articleId)]).then(values => {
+			return Promise.all([that.brandingService.getBranding(), that.articlesService.getById(that.articleId)]).then(values => {
 				that.branding = values[0];
 				let article = values[1];
 				if (!article) {
@@ -42,15 +50,16 @@ export class ArticleDetailsComponent implements OnInit {
 			});
 		} else {
 			that.navigateToArticlesList();
+			return Promise.resolve();
 		}
 	}
 
-	goToFullArticle() {
+	private goToFullArticle() {
 		let that = this;
 		window.open(that.currentArticle.link, '_system');
 	}
 
-	navigateToArticlesList() {
+	private navigateToArticlesList() {
 		let that = this;
 		that.router.navigate(["articles-list"]);
 	}

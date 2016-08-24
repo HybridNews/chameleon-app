@@ -1,13 +1,16 @@
-<nav *ngIf="currentArticle" class="navbar navbar-default article-details-header">
+<nav *ngIf="currentArticle">
+	<img class="m-logo img-responsive" alt="Brand" [src]="branding.largeLogoUrl">
 	<div class="container-fluid">
-		<i class="fa fa-home fa-4x" (click)="navigateToArticlesList()"></i>
+		<i class="fa fa-long-arrow-left fa-3x" (click)="navigateToArticlesList()"></i>
 	</div>
 </nav>
 <div *ngIf="currentArticle">
-	<h3 class="article-details-title">{{currentArticle.title}}</h3>
-	<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title" class="center-block">
-	<div class="article-details-description">
-		<p>{{currentArticle.description}}</p>
-	</div>
-	<button type="button" class="btn btn-info center-block" (click)="goToFullArticle()">View full article in the browser</button>
+	<pull-to-refresh [onRefresh]="reloadArticles">
+		<h3 class="article-details-title">{{currentArticle.title}}</h3>
+		<img [src]="branding.resourcesBaseUrl + currentArticle.imageUrl" [alt]="currentArticle.title" class="center-block">
+		<div class="article-details-description">
+			<p>{{currentArticle.description}}</p>
+		</div>
+		<button type="button" class="btn btn-info center-block" (click)="goToFullArticle()">View full article in the browser</button>
+	</pull-to-refresh>
 </div>

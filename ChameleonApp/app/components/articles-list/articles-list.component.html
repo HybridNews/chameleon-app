@@ -3,7 +3,6 @@
 </nav>
 
 <pull-to-refresh [onRefresh]="reloadArticles">
-	<!--TODO: take a look at trackBy for performance-->
 	<carousel #topArticlesComponent *ngIf="branding"
 			  gestures (onGesture)="onTopArticlesSwipe($event)"
 			  [interval]="branding.topArticlesIntervalInMs" [noWrap]="false">
@@ -18,7 +17,7 @@
 
 	<div class="container-fluid all-articles-wrapper">
 		<div class="row" style="display:flex; flex-wrap: wrap;">
-			<div class="clearfix col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
+			<div class="clearfix col col-xs-6 col-sm-4 col-md-4" *ngFor="let article of articles">
 				<div class="thumbnail" (click)="onArticleClick(article)">
 					<img class="article-thumbnail-image" [src]="branding.resourcesBaseUrl + article.imageUrl" [alt]="article.title">
 					<div class="caption">
