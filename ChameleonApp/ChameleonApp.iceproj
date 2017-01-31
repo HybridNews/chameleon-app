@@ -106,6 +106,66 @@
       <SubType>Content</SubType>
       <DependentUpon>app\services\xml-to-json.service.ts</DependentUpon>
     </Content>
+    <Content Include="node_modules\%40angular\common\bundles\common.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\compiler\bundles\compiler.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\core\bundles\core.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\http\bundles\http.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\bundles\platform-browser-dynamic.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\platform-browser\bundles\platform-browser.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\router\bundles\router.umd.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\font-awesome\css\font-awesome.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\hammerjs\hammer.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\reflect-metadata\Reflect.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\toPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Observable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\PromiseObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Observer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\toPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Subject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\systemjs\dist\system.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\underscore\underscore-min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\zone.js\dist\zone.min.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="package.json">
       <SubType>Content</SubType>
     </Content>
@@ -262,6 +322,38 @@
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="app\" />
+    <Folder Include="node_modules\" />
+    <Folder Include="node_modules\%40angular\" />
+    <Folder Include="node_modules\%40angular\common\" />
+    <Folder Include="node_modules\%40angular\common\bundles\" />
+    <Folder Include="node_modules\%40angular\compiler\" />
+    <Folder Include="node_modules\%40angular\compiler\bundles\" />
+    <Folder Include="node_modules\%40angular\core\" />
+    <Folder Include="node_modules\%40angular\core\bundles\" />
+    <Folder Include="node_modules\%40angular\http\" />
+    <Folder Include="node_modules\%40angular\http\bundles\" />
+    <Folder Include="node_modules\%40angular\platform-browser-dynamic\" />
+    <Folder Include="node_modules\%40angular\platform-browser-dynamic\bundles\" />
+    <Folder Include="node_modules\%40angular\platform-browser\" />
+    <Folder Include="node_modules\%40angular\platform-browser\bundles\" />
+    <Folder Include="node_modules\%40angular\router\" />
+    <Folder Include="node_modules\%40angular\router\bundles\" />
+    <Folder Include="node_modules\font-awesome\" />
+    <Folder Include="node_modules\font-awesome\css\" />
+    <Folder Include="node_modules\hammerjs\" />
+    <Folder Include="node_modules\ng2-bootstrap\" />
+    <Folder Include="node_modules\ng2-bootstrap\bundles\" />
+    <Folder Include="node_modules\reflect-metadata\" />
+    <Folder Include="node_modules\rxjs\" />
+    <Folder Include="node_modules\rxjs\add\" />
+    <Folder Include="node_modules\rxjs\add\operator\" />
+    <Folder Include="node_modules\rxjs\observable\" />
+    <Folder Include="node_modules\rxjs\operator\" />
+    <Folder Include="node_modules\systemjs\" />
+    <Folder Include="node_modules\systemjs\dist\" />
+    <Folder Include="node_modules\underscore\" />
+    <Folder Include="node_modules\zone.js\" />
+    <Folder Include="node_modules\zone.js\dist\" />
     <Folder Include="resources\" />
     <Folder Include="styles\" />
     <Folder Include="Plugins\" />
