@@ -10,4 +10,5 @@ export class RssChannel {
 
 class RssChannelImage {
 	link: string;
+	url: string;
 }
