@@ -115,6 +115,9 @@
     <Content Include="node_modules\%40angular\core\bundles\core.umd.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\%40angular\core\src\facade\lang.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\%40angular\http\bundles\http.umd.js">
       <SubType>Content</SubType>
     </Content>
@@ -139,22 +142,859 @@
     <Content Include="node_modules\reflect-metadata\Reflect.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\rxjs\add\operator\audit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\auditTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\buffer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\bufferCount.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\bufferTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\bufferToggle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\bufferWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\cache.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\catch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\combineAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\combineLatest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\concat.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\concatAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\concatMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\concatMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\count.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\debounce.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\debounceTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\defaultIfEmpty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\delay.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\delayWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\dematerialize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\distinct.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\distinctKey.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\distinctUntilChanged.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\distinctUntilKeyChanged.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\do.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\elementAt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\every.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\exhaust.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\exhaustMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\expand.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\filter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\finally.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\find.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\findIndex.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\first.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\groupBy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\ignoreElements.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\isEmpty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\last.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\let.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\mapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\materialize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\max.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\merge.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\mergeAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\mergeMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\mergeMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\mergeScan.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\multicast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\observeOn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\pairwise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\partition.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\pluck.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\publish.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\publishBehavior.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\publishLast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\publishReplay.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\race.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\reduce.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\repeat.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\retry.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\retryWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\sample.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\sampleTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\scan.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\share.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\single.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\skip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\skipUntil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\skipWhile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\startWith.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\subscribeOn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\switch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\switchMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\switchMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\take.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\takeLast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\takeUntil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\takeWhile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\throttle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\throttleTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\timeInterval.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\timeout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\timeoutWith.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\timestamp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\toArray.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\rxjs\add\operator\toPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\window.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\windowCount.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\windowTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\windowToggle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\windowWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\withLatestFrom.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\zip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\add\operator\zipAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\AsyncSubject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\BehaviorSubject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\InnerSubscriber.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Notification.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="node_modules\rxjs\Observable.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\rxjs\observable\ArrayLikeObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\ArrayObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\bindCallback.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\bindNodeCallback.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\BoundCallbackObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\BoundNodeCallbackObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\concat.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\ConnectableObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\defer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\DeferObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\empty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\EmptyObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\ErrorObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\forkJoin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\ForkJoinObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\from.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\fromEvent.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\FromEventObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\fromEventPattern.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\FromEventPatternObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\FromObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\fromPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\if.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\IfObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\interval.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\IntervalObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\IteratorObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\merge.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\never.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\NeverObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\of.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\rxjs\observable\PromiseObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\range.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\RangeObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\ScalarObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\SubscribeOnObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\throw.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\timer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\TimerObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\using.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\UsingObservable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\observable\zip.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="node_modules\rxjs\Observer.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\rxjs\Operator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\audit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\auditTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\buffer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\bufferCount.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\bufferTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\bufferToggle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\bufferWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\cache.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\catch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\combineAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\combineLatest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\concat.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\concatAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\concatMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\concatMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\count.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\debounce.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\debounceTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\defaultIfEmpty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\delay.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\delayWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\dematerialize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\distinct.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\distinctKey.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\distinctUntilChanged.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\distinctUntilKeyChanged.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\do.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\elementAt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\every.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\exhaust.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\exhaustMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\expand.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\filter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\finally.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\find.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\findIndex.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\first.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\groupBy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\ignoreElements.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\isEmpty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\last.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\let.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\mapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\materialize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\max.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\merge.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\mergeAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\mergeMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\mergeMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\mergeScan.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\multicast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\observeOn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\pairwise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\partition.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\pluck.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\publish.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\publishBehavior.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\publishLast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\publishReplay.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\race.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\reduce.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\repeat.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\retry.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\retryWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\sample.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\sampleTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\scan.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\share.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\single.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\skip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\skipUntil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\skipWhile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\startWith.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\subscribeOn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\switch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\switchMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\switchMapTo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\take.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\takeLast.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\takeUntil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\takeWhile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\throttle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\throttleTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\timeInterval.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\timeout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\timeoutWith.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\timestamp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\toArray.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\rxjs\operator\toPromise.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="node_modules\rxjs\operator\window.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\windowCount.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\windowTime.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\windowToggle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\windowWhen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\withLatestFrom.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\zip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\operator\zipAll.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\OuterSubscriber.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\ReplaySubject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Rx.DOM.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Rx.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Rx.KitchenSink.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Scheduler.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="node_modules\rxjs\Subject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\SubjectSubscription.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Subscriber.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\Subscription.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\symbol\iterator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\symbol\observable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\symbol\rxSubscriber.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\AnimationFrame.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\applyMixins.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\assign.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\EmptyError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\errorObject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\FastMap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\Immediate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isArray.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isDate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isFunction.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isNumeric.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isObject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\isScheduler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\Map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\MapPolyfill.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\noop.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\not.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\ObjectUnsubscribedError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\root.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\subscribeToResult.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\throwError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\toSubscriber.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\tryCatch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\rxjs\util\UnsubscriptionError.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="node_modules\systemjs\dist\system.js">
@@ -287,6 +1127,7 @@
     <TypeScriptCompile Include="app\services\articles.service.ts" />
     <TypeScriptCompile Include="app\services\rss-feed.service.ts" />
     <TypeScriptCompile Include="app\services\xml-to-json.service.ts" />
+    <TypeScriptCompile Include="node_modules\rxjs\Rx.d.ts" />
     <TypeScriptCompile Include="typings\globals\cordova\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\hammerjs\index.d.ts" />
@@ -330,6 +1171,8 @@
     <Folder Include="node_modules\%40angular\compiler\bundles\" />
     <Folder Include="node_modules\%40angular\core\" />
     <Folder Include="node_modules\%40angular\core\bundles\" />
+    <Folder Include="node_modules\%40angular\core\src\" />
+    <Folder Include="node_modules\%40angular\core\src\facade\" />
     <Folder Include="node_modules\%40angular\http\" />
     <Folder Include="node_modules\%40angular\http\bundles\" />
     <Folder Include="node_modules\%40angular\platform-browser-dynamic\" />
@@ -349,6 +1192,8 @@
     <Folder Include="node_modules\rxjs\add\operator\" />
     <Folder Include="node_modules\rxjs\observable\" />
     <Folder Include="node_modules\rxjs\operator\" />
+    <Folder Include="node_modules\rxjs\symbol\" />
+    <Folder Include="node_modules\rxjs\util\" />
     <Folder Include="node_modules\systemjs\" />
     <Folder Include="node_modules\systemjs\dist\" />
     <Folder Include="node_modules\underscore\" />
